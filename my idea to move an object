@@ -1,0 +1,38 @@
+#include <graphics.h>
+
+#include <dos.h>
+#include <conio.h>
+#include<stdio.h>
+
+int main()
+{   clrscr();
+   int i, j = 0, gd = DETECT, gm;
+
+   initgraph(&gd,&gm,"C:\\TC\\BGI");
+
+   settextstyle(DEFAULT_FONT,HORIZ_DIR,2);
+   outtextxy(25,240,"PRESS ANY KEY TO PROCEED WITH FRANFERN AIRLINES");
+
+   getch();
+
+
+   for( i = 0 ; i <= 420 ; i = i + 10, j++ )
+    {
+      circle(75+i,410,10);
+      gotoxy(400,400);
+      outtextxy(100,200,"WELCOME TO FRANFERN");
+      circle(175+i,410,10);
+      setcolor(j);
+      delay(100);
+
+
+      if( i == 420 )
+	 break;
+
+      clearviewport();
+   }
+
+   getch();
+   closegraph();
+   return 0;
+}
