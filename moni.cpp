@@ -65,7 +65,7 @@ void closestMinPair(vector<int> &arr) {
             break;
         }
     }
-   // cout<<endl<<second_min;
+   //// cout<<endl<<second_min;
    /* for(int i=0;i<c;i++)
     {
         cout<<diff2[i]<<" ";
